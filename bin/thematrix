@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+/*
+ * thematrix
+ * https://github.com/100hz/node-thematrix
+ *
+ * Copyright (c) 2013 Sebastian Krüger
+ * Licensed under the MIT license.
+*/
+
+var options, program;
+
+require('aspects');
+
+program = require('commander');
+
+String.aspects(require('../lib/thematrix'));
+
+program.version('0.1.0').description('The matrix itself').usage('[options] <is a lie>').option('-i, --interval [ms]', 'repaint interval in milliseconds', 50).option('-d, --distance [lines]', 'maximum string heaven distance in lines', 20).parse(process.argv);
+
+options = {
+  w: process.stdout.columns,
+  h: process.stdout.rows
+};
+
+options.interval = program.interval;
+
+options.distance = program.distance;
+
+program.args.join(" ").thematrix(options);

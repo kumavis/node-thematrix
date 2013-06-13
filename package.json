@@ -1,0 +1,48 @@
+{
+  "name": "thematrix",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/100hz/node-thematrix",
+  "author": {
+    "name": "Sebastian Krüger",
+    "email": "sebastian.krueger@theblackestbox.net",
+    "url": "http://theblackestbox.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/100hz/node-thematrix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/100hz/node-thematrix/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/100hz/node-thematrix/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/thematrix",
+  "bin": {
+    "thematrix": "bin/thematrix"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "commander": "~1.1.1",
+    "aspects": "~0.1.2",
+    "colors": "~0.6.0-1"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-moreshell": "~0.1.2",
+    "grunt-banner": "~0.1.4",
+    "chai": "~1.6.0",
+    "grunt": "~0.4.1"
+  },
+  "keywords": []
+}
